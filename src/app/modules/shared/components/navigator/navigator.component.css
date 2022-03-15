@@ -1,0 +1,25 @@
+/* Nav Links */
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  color: darkcyan;
+}

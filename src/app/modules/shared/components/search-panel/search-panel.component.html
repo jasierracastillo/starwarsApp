@@ -1,0 +1,32 @@
+<div class="topnav">
+  <div>
+    <a
+      *ngFor="let item of entries"
+      class="entry"
+      (click)="sendEntry(item)"
+      (click)="navigate(itemType, 'list', item)"
+      >{{ item }}</a
+    >
+  </div>
+  <div class="search-container">
+    <form>
+      <input
+        type="text"
+        placeholder="Search.."
+        name="search"
+        [(ngModel)]="searching"
+      />
+      <!-- (click)="navigate('films', '?search=', searching)" -->
+      <button
+        type="button"
+        class="btn btn-outline-info"
+        (click)="saveSearch(searching)"
+        (click)="sendEntry(searching)"
+        [disabled]="searching.length === 0"
+        (click)="navigate(itemType, 'list', searching)"
+      >
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+</div>

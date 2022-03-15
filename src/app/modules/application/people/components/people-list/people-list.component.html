@@ -1,0 +1,16 @@
+<app-search-panel
+  [itemType]="itemType"
+  (selectedEntry)="recieveFilter($event)"
+></app-search-panel>
+
+<app-navigator></app-navigator>
+
+<div class="alert alert-info" role="alert" *ngIf="loading$ | async">
+  Loading ...
+</div>
+
+<app-people-list-panel
+  [people$]="people$"
+  [filter]="filter"
+  (selectedItem)="getItem($event)"
+></app-people-list-panel>

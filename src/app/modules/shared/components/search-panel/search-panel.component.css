@@ -1,0 +1,10 @@
+.entry {
+  cursor: pointer;
+}
+button {
+  margin: 0 10px;
+}
+
+.search-container {
+  margin-bottom: 5px;
+}
